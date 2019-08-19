@@ -30,6 +30,11 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
     }
 
     @Override
+    public void login(String username, String password) {
+
+    }
+
+    @Override
     public void register(String username, String password) {
         /*
          * 逻辑思路

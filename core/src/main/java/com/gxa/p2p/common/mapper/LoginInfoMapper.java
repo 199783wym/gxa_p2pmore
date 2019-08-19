@@ -22,6 +22,7 @@ public interface LoginInfoMapper {
      * @param loginInfo
      *
      */
+
     int insert(LoginInfo loginInfo);
 
 }

@@ -54,4 +54,5 @@
            #{admin,jdbcType=BIT})
   </insert>
 
+
 </mapper>
