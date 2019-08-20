@@ -3,6 +3,7 @@ package com.gxa.p2p.common.service.impl;
 import com.gxa.p2p.common.domain.LoginInfo;
 import com.gxa.p2p.common.mapper.LoginInfoMapper;
 import com.gxa.p2p.common.service.ILoginInfoService;
+import com.gxa.p2p.common.util.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,7 +31,14 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
     }
 
     @Override
-    public void login(String username, String password) {
+    public boolean login(String username, String password) {
+        LoginInfo loginInfo = new LoginInfo();
+        loginInfo = logininfoMapper.selectLoiginInfoByUsername(username);
+        if(loginInfo.getState()==0 && loginInfo.getPassword().equals(password)){
+            UserContext.putLoginInfo(loginInfo);
+            return true;
+        }
+        return false;
 
     }
 

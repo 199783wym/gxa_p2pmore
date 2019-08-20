@@ -25,4 +25,6 @@ public interface LoginInfoMapper {
 
     int insert(LoginInfo loginInfo);
 
+    LoginInfo selectLoiginInfoByUsername(String usernam);
+
 }

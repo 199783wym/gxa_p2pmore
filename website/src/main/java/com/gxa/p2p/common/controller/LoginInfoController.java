@@ -35,7 +35,6 @@ public class LoginInfoController {
         JSONResult json = new JSONResult();
         try {
             iLoginInfoService.register(username, password);
-            System.out.println("username password succeed");
         } catch (RuntimeException re) {
             json.setSuccess(false);
             json.setMsg(re.getMessage());
@@ -46,12 +45,22 @@ public class LoginInfoController {
     @ResponseBody
     public JSONResult login(String username,String password){
         JSONResult json = new JSONResult();
-        try {
-            iLoginInfoService.login(username, password);
-        } catch (RuntimeException re) {
+//        try {
+//            iLoginInfoService.login(username, password);
+//        } catch (RuntimeException re) {
+//            json.setSuccess(false);
+//            json.setMsg(re.getMessage());
+//        }
+        if (iLoginInfoService.login(username,password)){
+
+        }
+        else{
+
             json.setSuccess(false);
-            json.setMsg(re.getMessage());
+            json.setMsg("登录失败");
+
         }
         return json;
+
     }
 }
