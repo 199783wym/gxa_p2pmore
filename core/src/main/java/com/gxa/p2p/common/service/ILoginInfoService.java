@@ -1,5 +1,7 @@
 package com.gxa.p2p.common.service;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @Author: ym
  * @Date: 2019/8/19 11:30
@@ -10,5 +12,5 @@ public interface ILoginInfoService {
 
     void register(String username, String password);
 
-    boolean login(String username, String password);
+    boolean login(String username, String password, HttpServletRequest request, int usertype);
 }

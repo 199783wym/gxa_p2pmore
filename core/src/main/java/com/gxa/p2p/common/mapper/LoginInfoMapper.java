@@ -1,6 +1,8 @@
 package com.gxa.p2p.common.mapper;
 
 import com.gxa.p2p.common.domain.LoginInfo;
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 public interface LoginInfoMapper {
@@ -25,6 +27,8 @@ public interface LoginInfoMapper {
 
     int insert(LoginInfo loginInfo);
 
-    LoginInfo selectLoiginInfoByUsername(String usernam);
+    LoginInfo selectLoiginInfoByUsername(@Param("username")String usernam,
+                                         @Param("password")String password,
+                                         @Param("usertype")int usertype);
 
 }

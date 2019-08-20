@@ -53,10 +53,13 @@
            #{usertype,jdbcType=TINYINT},
            #{admin,jdbcType=BIT})
   </insert>
-    <select id="selectLoiginInfoByUsername" parameterType="String" resultType="com.gxa.p2p.common.domain.LoginInfo">
+
+    <select id="selectLoiginInfoByUsername" resultType="com.gxa.p2p.common.domain.LoginInfo" >
     select id, username, password, state, usertype, admin
     from `logininfo`
-    where username = #{username,jdbcType=BIGINT}
+    where username = #{username}
+          and password=#{password}
+          and usertype =#{usertype}
     </select>
 
 

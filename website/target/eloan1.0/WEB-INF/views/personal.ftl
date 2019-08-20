@@ -48,7 +48,7 @@
 
 							<div class="row h4 account-info">
 								<div class="col-sm-4">
-									账户总额：<span class="text-primary">0元</span>
+									账户总额：<span class="text-primary">${account.usableamount}元</span>
 								</div>
 								<div class="col-sm-4">
 									可用金额：<span class="text-primary">0元</span>

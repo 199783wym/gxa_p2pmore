@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 public class UserContext {
 
 
-    public static final String USER_IN_SESSION = "logininfo";
+    public static final String USER_IN_SESSION = "loginInfo";
 
 
     /**
