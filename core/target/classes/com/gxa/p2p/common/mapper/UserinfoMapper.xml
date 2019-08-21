@@ -50,7 +50,7 @@
       email = #{email,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+  <select id="selectByPrimaryKey" resultType="com.gxa.p2p.common.domain.Userinfo" parameterType="java.lang.Long" >
     select id, version, bitState, realName, idNumber, phoneNumber, incomeGrade_id, marriage_id, 
     kidCount_id, educationBackground_id, authScore, houseCondition_id, realauthid, email
     from `userinfo`
