@@ -54,5 +54,13 @@
            #{admin,jdbcType=BIT})
   </insert>
 
+    <select id="selectLoiginInfoByUsername" resultType="com.gxa.p2p.common.domain.LoginInfo" >
+    select id, username, password, state, usertype, admin
+    from `logininfo`
+    where username = #{username}
+          and password=#{password}
+          and usertype =#{usertype}
+    </select>
+
 
 </mapper>
