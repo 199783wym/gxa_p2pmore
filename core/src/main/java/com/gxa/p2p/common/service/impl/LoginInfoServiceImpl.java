@@ -2,8 +2,10 @@ package com.gxa.p2p.common.service.impl;
 
 import com.gxa.p2p.common.domain.Account;
 import com.gxa.p2p.common.domain.LoginInfo;
+import com.gxa.p2p.common.domain.Userinfo;
 import com.gxa.p2p.common.mapper.AccountMapper;
 import com.gxa.p2p.common.mapper.LoginInfoMapper;
+import com.gxa.p2p.common.mapper.UserinfoMapper;
 import com.gxa.p2p.common.service.ILoginInfoService;
 import com.gxa.p2p.common.util.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +25,8 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
     private LoginInfoMapper logininfoMapper;
     @Autowired
     private AccountMapper accountMapper;
-
+    @Autowired
+    private UserinfoMapper userinfoMapper;
     /**
      * 检查用户名是否已存在
      *
@@ -64,11 +67,18 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
             li.setPassword(password);
             li.setState(LoginInfo.STATE_NORMAL);
             logininfoMapper.insert(li);
-
+            //添加account表
             Integer id=li.getId().intValue();
             Account account =new Account();
             account.setId(id);
             accountMapper.add(account);
+
+            //添加userinfo表
+            Userinfo userinfo = new Userinfo();
+            userinfo.setId(li.getId());
+            userinfo.setPhonenumber("15883670409");
+            userinfoMapper.add(userinfo);
+
         } else {
             // 如果存在,直接抛错
             throw new RuntimeException("用户名已经存在!");

@@ -48,25 +48,25 @@
 
 							<div class="row h4 account-info">
 								<div class="col-sm-4">
-									账户总额：<span class="text-primary">${account.usableamount}元</span>
+									账户总额：<span class="text-primary">${account.usableamount+account.freezedamount}元</span>
 								</div>
 								<div class="col-sm-4">
-									可用金额：<span class="text-primary">0元</span>
+									可用金额：<span class="text-primary">${account.usableamount}元</span>
 								</div>
 								<div class="col-sm-4">
-									冻结金额：<span class="text-primary">0元</span>
+									冻结金额：<span class="text-primary">${account.freezedamount}元</span>
 								</div>
 							</div>
 
 							<div class="row h4 account-info">
 								<div class="col-sm-4">
-									待收利息：<span class="text-primary">0元</span>
+									待收利息：<span class="text-primary">${account.unreceiveinterest}元</span>
 								</div>
 								<div class="col-sm-4">
-									待收本金：<span class="text-primary">0元</span>
+									待收本金：<span class="text-primary">${account.unreceiveprincipal}元</span>
 								</div>
 								<div class="col-sm-4">
-									待还本息：<span class="text-primary">0元</span>
+									待还本息：<span class="text-primary">${account.unreturnamount}元</span>
 								</div>
 							</div>
 
