@@ -88,8 +88,17 @@
       <change beforePath="$PROJECT_DIR$/../../blogs_more/web/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../blogs_more/web/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../blogs_more/web/user/addArticle.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../blogs_more/web/user/addArticle.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Userinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Userinfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IUserinfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IUserinfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/UserinfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/UserinfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/domain/Userinfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/domain/Userinfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/service/IUserinfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/target/classes/com/gxa/p2p/common/service/impl/UserinfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/UserInfoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/userInfo.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/userInfo.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/lib/core-1.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/website/target/eloan1.0/WEB-INF/lib/core-1.0.0.jar" afterDir="false" />
     </list>
@@ -138,121 +147,178 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="5" />
-          <entry key="ftl" value="57" />
+          <entry key="ftl" value="70" />
           <entry key="html" value="32" />
-          <entry key="java" value="2223" />
+          <entry key="java" value="2450" />
           <entry key="jsp" value="56" />
           <entry key="properties" value="14" />
-          <entry key="xml" value="592" />
+          <entry key="xml" value="710" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="FTL" value="57" />
+          <entry key="FTL" value="70" />
           <entry key="HTML" value="32" />
-          <entry key="JAVA" value="2223" />
+          <entry key="JAVA" value="2450" />
           <entry key="JSP" value="56" />
           <entry key="PLAIN_TEXT" value="5" />
           <entry key="Properties" value="14" />
           <entry key="SQL" value="5" />
-          <entry key="XML" value="587" />
+          <entry key="XML" value="705" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="13" />
+          <entry key="class" value="14" />
           <entry key="css" value="2" />
-          <entry key="ftl" value="10" />
+          <entry key="ftl" value="12" />
           <entry key="html" value="11" />
-          <entry key="java" value="86" />
+          <entry key="java" value="114" />
           <entry key="jsp" value="4" />
           <entry key="properties" value="4" />
           <entry key="sql" value="3" />
-          <entry key="xml" value="39" />
+          <entry key="xml" value="45" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="13" />
+          <entry key="CLASS" value="14" />
           <entry key="CSS" value="2" />
-          <entry key="FTL" value="10" />
+          <entry key="FTL" value="12" />
           <entry key="HTML" value="11" />
-          <entry key="JAVA" value="86" />
+          <entry key="JAVA" value="114" />
           <entry key="JSP" value="4" />
           <entry key="Properties" value="4" />
           <entry key="Scratch" value="3" />
-          <entry key="XML" value="39" />
+          <entry key="XML" value="45" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/UserinfoServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/UserInfoController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="28" column="78" selection-start-line="28" selection-start-column="78" selection-end-line="28" selection-end-column="78" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/userInfo.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="111" column="59" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="59" />
+            <state relative-caret-position="287">
+              <caret line="129" column="55" lean-forward="true" selection-start-line="129" selection-start-column="55" selection-end-line="129" selection-end-column="55" />
+              <folding>
+                <element signature="n#style#0;n#select#0;n#div#0;n#div#5;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#div#0;n#div#6;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#div#0;n#div#7;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#select#0;n#div#0;n#div#8;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LoginInfoMapper.xml">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+            <state relative-caret-position="102">
+              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LoginInfoMapper.java">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Userinfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+            <state relative-caret-position="228">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#644#645#0" expanded="true" />
+                <element signature="e#690#691#0" expanded="true" />
+                <element signature="e#879#880#0" expanded="true" />
+                <element signature="e#904#905#0" expanded="true" />
+                <element signature="e#938#939#0" expanded="true" />
+                <element signature="e#966#967#0" expanded="true" />
+                <element signature="e#1001#1002#0" expanded="true" />
+                <element signature="e#1031#1032#0" expanded="true" />
+                <element signature="e#1078#1079#0" expanded="true" />
+                <element signature="e#1116#1117#0" expanded="true" />
+                <element signature="e#1149#1150#0" expanded="true" />
+                <element signature="e#1180#1181#0" expanded="true" />
+                <element signature="e#1226#1227#0" expanded="true" />
+                <element signature="e#1266#1267#0" expanded="true" />
+                <element signature="e#1301#1302#0" expanded="true" />
+                <element signature="e#1332#1333#0" expanded="true" />
+                <element signature="e#1380#1381#0" expanded="true" />
+                <element signature="e#1420#1421#0" expanded="true" />
+                <element signature="e#1455#1456#0" expanded="true" />
+                <element signature="e#1486#1487#0" expanded="true" />
+                <element signature="e#1534#1535#0" expanded="true" />
+                <element signature="e#1574#1575#0" expanded="true" />
+                <element signature="e#1612#1613#0" expanded="true" />
+                <element signature="e#1646#1647#0" expanded="true" />
+                <element signature="e#1700#1701#0" expanded="true" />
+                <element signature="e#1746#1747#0" expanded="true" />
+                <element signature="e#1784#1785#0" expanded="true" />
+                <element signature="e#1820#1821#0" expanded="true" />
+                <element signature="e#1876#1877#0" expanded="true" />
+                <element signature="e#1926#1927#0" expanded="true" />
+                <element signature="e#1961#1962#0" expanded="true" />
+                <element signature="e#1994#1995#0" expanded="true" />
+                <element signature="e#2044#2045#0" expanded="true" />
+                <element signature="e#2088#2089#0" expanded="true" />
+                <element signature="e#2123#2124#0" expanded="true" />
+                <element signature="e#2156#2157#0" expanded="true" />
+                <element signature="e#2206#2207#0" expanded="true" />
+                <element signature="e#2250#2251#0" expanded="true" />
+                <element signature="e#2296#2297#0" expanded="true" />
+                <element signature="e#2340#2341#0" expanded="true" />
+                <element signature="e#2515#2516#0" expanded="true" />
+                <element signature="e#2547#2548#0" expanded="true" />
+                <element signature="e#2598#2599#0" expanded="true" />
+                <element signature="e#2640#2641#0" expanded="true" />
+                <element signature="e#2681#2682#0" expanded="true" />
+                <element signature="e#2720#2721#0" expanded="true" />
+                <element signature="e#2782#2783#0" expanded="true" />
+                <element signature="e#2838#2839#0" expanded="true" />
+                <element signature="e#2873#2874#0" expanded="true" />
+                <element signature="e#2906#2907#0" expanded="true" />
+                <element signature="e#2956#2957#0" expanded="true" />
+                <element signature="e#3000#3001#0" expanded="true" />
+                <element signature="e#3032#3033#0" expanded="true" />
+                <element signature="e#3060#3061#0" expanded="true" />
+                <element signature="e#3102#3103#0" expanded="true" />
+                <element signature="e#3136#3137#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Systemdictionaryitem.java">
+        <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/UserInfoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="337">
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/apache-maven-3.3.9-repository/org/springframework/spring-tx/4.0.0.RELEASE/spring-tx-4.0.0.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/util/BitStatesUtils.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/LoginInfoController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="158" column="29" lean-forward="true" selection-start-line="158" selection-start-column="29" selection-end-line="158" selection-end-column="29" />
+            <state relative-caret-position="210">
+              <caret line="57" column="11" lean-forward="true" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="304">
+              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -260,8 +326,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="779">
-              <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+            <state relative-caret-position="477">
+              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/UserinfoServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="178">
+              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -286,6 +364,7 @@
       <find>selectLoiginInfoByUsername</find>
       <find>version</find>
       <find>userInfo</find>
+      <find>selectByInfo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -324,16 +403,16 @@
         <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/personal.ftl" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/LoginInfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Userinfo.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/LoginInfo.java" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.xml" />
-        <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/userInfo.ftl" />
         <option value="$PROJECT_DIR$/core/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IUserinfoService.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/UserinfoServiceImpl.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.java" />
         <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.xml" />
-        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/UserinfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Userinfo.java" />
         <option value="$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/UserInfoController.java" />
+        <option value="$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.xml" />
+        <option value="$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/userInfo.ftl" />
       </list>
     </option>
   </component>
@@ -391,10 +470,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="978" />
-    <option name="height" value="1048" />
+    <option name="x" value="105" />
+    <option name="y" value="55" />
+    <option name="width" value="1750" />
+    <option name="height" value="965" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -509,6 +588,11 @@
             <path>
               <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
               <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
+              <item name="mgrsite" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="p2p1.0.0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="p2p1.0.0" type="462c0819:PsiDirectoryNode" />
               <item name="website" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -580,9 +664,9 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566377506290" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566453890986" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../edu1.0.0" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -592,8 +676,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\codebase\idea_javaweb\gxa\p2p1.0.0\website\src\main\webapp\WEB-INF\views" />
       <recent name="D:\codebase\idea_javaweb\gxa\p2p1.0.0\core\src\main\java\com\gxa\p2p\common\util" />
+      <recent name="D:\codebase\idea_javaweb\gxa\p2p1.0.0\website\src\main\webapp\WEB-INF\views" />
       <recent name="D:\codebase\idea_javaweb\gxa\p2p1.0.0\website\src\main\webapp\WEB-INF" />
       <recent name="D:\codebase\idea_javaweb\gxa\p2p1.0.0\core\src\main\resources" />
       <recent name="D:\codebase\idea_javaweb\gxa\p2p1.0.0\website\src\main\resources" />
@@ -852,12 +936,12 @@
       <workItem from="1566193058334" duration="7349000" />
       <workItem from="1566226059692" duration="14885000" />
       <workItem from="1566350667481" duration="5590000" />
-      <workItem from="1566362372287" duration="7472000" />
+      <workItem from="1566362372287" duration="26305000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50797000" />
+    <option name="totallyTimeSpent" value="69630000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -869,11 +953,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="782" height="838" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49574468" visible="true" weight="0.41298342" />
-      <window_info id="Structure" order="1" sideWeight="0.5042553" side_tool="true" weight="0.15951742" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49367088" visible="true" weight="0.20643431" />
+      <window_info id="Structure" order="1" sideWeight="0.5063291" side_tool="true" weight="0.20643431" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -883,16 +967,16 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.4208211" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.41337386" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" visible="true" weight="0.46627566" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.1260997" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32991204" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.31085044" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32991204" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3240469" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013405" side_tool="true" weight="0.46627566" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32258064" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32991204" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32991204" />
       <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
@@ -912,8 +996,8 @@
       <window_info anchor="right" id="Maven Projects" order="9" weight="0.57707775" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49888143" visible="true" weight="0.37482712" />
-      <window_info id="Structure" order="1" sideWeight="0.50111854" side_tool="true" weight="0.31258646" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49367088" visible="true" weight="0.42541435" />
+      <window_info id="Structure" order="1" sideWeight="0.5063291" side_tool="true" weight="0.20643431" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
@@ -923,16 +1007,16 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.35410336" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49865952" weight="0.46627566" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.1260997" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32991204" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.31085044" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32991204" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32697946" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5013405" side_tool="true" weight="0.46627566" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32258064" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32991204" />
       <window_info anchor="bottom" id="Database Changes" order="13" weight="0.32991204" />
       <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
@@ -946,10 +1030,10 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.32976446" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.32872927" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32841823" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Maven Projects" order="9" weight="0.57734805" />
+      <window_info anchor="right" id="Maven Projects" order="9" weight="0.57707775" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -962,10 +1046,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/LoginInfoServiceImpl.java</url>
-          <line>79</line>
+          <url>file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/UserinfoServiceImpl.java</url>
+          <line>29</line>
           <properties />
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -976,16 +1060,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mgrsite/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -1042,20 +1116,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/AccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/AccountServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/AccountMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1067,27 +1127,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Userinfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/LoginInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1112,13 +1151,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/ILoginInfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IAccountService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -1133,13 +1165,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/personal.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/common/leftmenu-tpl.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1147,27 +1172,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/LoginInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="31" column="37" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/util/JSONResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/LoginInfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1222,48 +1230,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="52" column="66" lean-forward="true" selection-start-line="52" selection-start-column="66" selection-end-line="52" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/util/UserContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/resources/generatorConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="186">
           <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IUserinfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="15" column="42" lean-forward="true" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -1295,17 +1265,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Systemdictionaryitem.java">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/LoginInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="342">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.xml">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="41" column="27" lean-forward="true" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
+        <state relative-caret-position="171">
+          <caret line="11" column="45" lean-forward="true" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Systemdictionaryitem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -1318,34 +1295,205 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/LoginInfoMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
+        <state relative-caret-position="328">
           <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/userInfo.ftl">
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/LoginInfoServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="111" column="59" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/UserinfoServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="190">
+          <caret line="29" selection-start-line="27" selection-end-line="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/UserInfoController.java">
+    <entry file="jar://D:/apache-maven-3.3.9-repository/org/springframework/spring-beans/4.0.0.RELEASE/spring-beans-4.0.0.RELEASE.jar!/org/springframework/beans/factory/support/AbstractBeanFactory.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="28" column="78" selection-start-line="28" selection-start-column="78" selection-end-line="28" selection-end-column="78" />
+        <state relative-caret-position="255">
+          <caret line="101" column="30" selection-start-line="101" selection-start-column="30" selection-end-line="101" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/ILoginInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/IUserinfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/personal.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="38" column="54" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/AccountServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/util/UserContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/LoginInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="57" column="11" lean-forward="true" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/service/impl/UserinfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/util/BitStatesUtils.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/AccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/java/com/gxa/p2p/common/controller/UserInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/domain/Userinfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#879#880#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#938#939#0" expanded="true" />
+            <element signature="e#966#967#0" expanded="true" />
+            <element signature="e#1001#1002#0" expanded="true" />
+            <element signature="e#1031#1032#0" expanded="true" />
+            <element signature="e#1078#1079#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+            <element signature="e#1301#1302#0" expanded="true" />
+            <element signature="e#1332#1333#0" expanded="true" />
+            <element signature="e#1380#1381#0" expanded="true" />
+            <element signature="e#1420#1421#0" expanded="true" />
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1486#1487#0" expanded="true" />
+            <element signature="e#1534#1535#0" expanded="true" />
+            <element signature="e#1574#1575#0" expanded="true" />
+            <element signature="e#1612#1613#0" expanded="true" />
+            <element signature="e#1646#1647#0" expanded="true" />
+            <element signature="e#1700#1701#0" expanded="true" />
+            <element signature="e#1746#1747#0" expanded="true" />
+            <element signature="e#1784#1785#0" expanded="true" />
+            <element signature="e#1820#1821#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+            <element signature="e#1926#1927#0" expanded="true" />
+            <element signature="e#1961#1962#0" expanded="true" />
+            <element signature="e#1994#1995#0" expanded="true" />
+            <element signature="e#2044#2045#0" expanded="true" />
+            <element signature="e#2088#2089#0" expanded="true" />
+            <element signature="e#2123#2124#0" expanded="true" />
+            <element signature="e#2156#2157#0" expanded="true" />
+            <element signature="e#2206#2207#0" expanded="true" />
+            <element signature="e#2250#2251#0" expanded="true" />
+            <element signature="e#2296#2297#0" expanded="true" />
+            <element signature="e#2340#2341#0" expanded="true" />
+            <element signature="e#2515#2516#0" expanded="true" />
+            <element signature="e#2547#2548#0" expanded="true" />
+            <element signature="e#2598#2599#0" expanded="true" />
+            <element signature="e#2640#2641#0" expanded="true" />
+            <element signature="e#2681#2682#0" expanded="true" />
+            <element signature="e#2720#2721#0" expanded="true" />
+            <element signature="e#2782#2783#0" expanded="true" />
+            <element signature="e#2838#2839#0" expanded="true" />
+            <element signature="e#2873#2874#0" expanded="true" />
+            <element signature="e#2906#2907#0" expanded="true" />
+            <element signature="e#2956#2957#0" expanded="true" />
+            <element signature="e#3000#3001#0" expanded="true" />
+            <element signature="e#3032#3033#0" expanded="true" />
+            <element signature="e#3060#3061#0" expanded="true" />
+            <element signature="e#3102#3103#0" expanded="true" />
+            <element signature="e#3136#3137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/SystemdictionaryitemMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/com/gxa/p2p/common/mapper/UserinfoMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/src/main/webapp/WEB-INF/views/userInfo.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="129" column="55" lean-forward="true" selection-start-line="129" selection-start-column="55" selection-end-line="129" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#5;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#6;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#7;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#0;n#div#0;n#div#8;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

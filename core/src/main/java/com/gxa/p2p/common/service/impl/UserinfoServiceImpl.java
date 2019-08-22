@@ -24,9 +24,10 @@ public class UserinfoServiceImpl implements IUserinfoService {
     @Autowired
     SystemdictionaryitemMapper systemdictionaryitemMapper;
 
+
     @Override
-    public List<Systemdictionaryitem> getedubg() {
-        List<Systemdictionaryitem> list =systemdictionaryitemMapper.selectByEduBG();
+    public List<Systemdictionaryitem> getUserInformation(String info) {
+        List<Systemdictionaryitem> list =systemdictionaryitemMapper.selectByInfo(info);
         return list;
     }
 

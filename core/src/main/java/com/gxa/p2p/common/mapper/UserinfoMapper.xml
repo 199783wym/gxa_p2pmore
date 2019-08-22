@@ -15,7 +15,26 @@
     <result column="authScore" property="authscore" jdbcType="INTEGER" />
     <result column="houseCondition_id" property="houseconditionId" jdbcType="BIGINT" />
     <result column="realauthid" property="realauthid" jdbcType="BIGINT" />
-    <result column="email" property="email" jdbcType="VARCHAR" />
+    <result column="email" property="email" jdbcType="VARCHAR"/>
+
+    <association property="educationbackgroundItem" javaType="Systemdictionaryitem"
+                 column="educationBackground_id"
+                 select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+
+    <association property="incomeGradeItem" javaType="Systemdictionaryitem"
+                 column="incomeGrade_id"
+                 select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+
+    <association property="marriageItem" javaType="Systemdictionaryitem"
+                 column="marriage_id"
+                 select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+    <association property="kidCountItem" javaType="Systemdictionaryitem"
+                 column="kidCount_id"
+                 select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+    <association property="houseConditionItem" javaType="Systemdictionaryitem"
+                 column="houseCondition_id"
+                 select="com.gxa.p2p.common.mapper.SystemdictionaryitemMapper.selectByPrimaryKey"/>
+
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from `userinfo`
@@ -33,34 +52,14 @@
       #{authscore,jdbcType=INTEGER}, #{houseconditionId,jdbcType=BIGINT}, #{realauthid,jdbcType=BIGINT}, 
       #{email,jdbcType=VARCHAR})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.gxa.p2p.common.domain.Userinfo" >
-    update `userinfo`
-    set version = #{version,jdbcType=INTEGER},
-      bitState = #{bitstate,jdbcType=BIGINT},
-      realName = #{realname,jdbcType=VARCHAR},
-      idNumber = #{idnumber,jdbcType=VARCHAR},
-      phoneNumber = #{phonenumber,jdbcType=VARCHAR},
-      incomeGrade_id = #{incomegradeId,jdbcType=BIGINT},
-      marriage_id = #{marriageId,jdbcType=BIGINT},
-      kidCount_id = #{kidcountId,jdbcType=BIGINT},
-      educationBackground_id = #{educationbackgroundId,jdbcType=BIGINT},
-      authScore = #{authscore,jdbcType=INTEGER},
-      houseCondition_id = #{houseconditionId,jdbcType=BIGINT},
-      realauthid = #{realauthid,jdbcType=BIGINT},
-      email = #{email,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=BIGINT}
-  </update>
-  <select id="selectByPrimaryKey" resultType="com.gxa.p2p.common.domain.Userinfo" parameterType="java.lang.Long" >
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select id, version, bitState, realName, idNumber, phoneNumber, incomeGrade_id, marriage_id, 
     kidCount_id, educationBackground_id, authScore, houseCondition_id, realauthid, email
     from `userinfo`
     where id = #{id,jdbcType=BIGINT}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap" >
-    select id, version, bitState, realName, idNumber, phoneNumber, incomeGrade_id, marriage_id, 
-    kidCount_id, educationBackground_id, authScore, houseCondition_id, realauthid, email
-    from `userinfo`
-  </select>
+
   <insert id="add" parameterType="com.gxa.p2p.common.domain.Userinfo">
     insert into `userinfo` (id,version, bitState, realName,
       idNumber, phoneNumber, incomeGrade_id,

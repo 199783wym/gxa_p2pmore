@@ -38,9 +38,9 @@
     from `systemdictionaryitem`
   </select>
 
-  <select id="selectByEduBG" resultType="com.gxa.p2p.common.domain.Systemdictionaryitem">
+  <select id="selectByInfo"  parameterType="String" resultType="com.gxa.p2p.common.domain.Systemdictionaryitem">
     select sdi.id,sdi.title
     from systemdictionaryitem sdi,systemdictionary sd
-    where sdi.parentId=sd.id and sd.sn='educationBackground'
+    where sdi.parentId=sd.id and sd.sn= #{info}
   </select>
 </mapper>

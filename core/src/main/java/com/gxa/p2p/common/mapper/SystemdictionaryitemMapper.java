@@ -1,6 +1,8 @@
 package com.gxa.p2p.common.mapper;
 
 import com.gxa.p2p.common.domain.Systemdictionaryitem;
+import org.apache.ibatis.annotations.Param;
+
 import java.util.List;
 
 public interface SystemdictionaryitemMapper {
@@ -14,5 +16,5 @@ public interface SystemdictionaryitemMapper {
 
     int updateByPrimaryKey(Systemdictionaryitem record);
 
-    List<Systemdictionaryitem> selectByEduBG();
+    List<Systemdictionaryitem> selectByInfo(@Param(value = "info") String info);
 }

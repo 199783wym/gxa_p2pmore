@@ -26,7 +26,12 @@ public class UserInfoController {
         LoginInfo li=(LoginInfo)request.getSession().getAttribute("loginInfo");
         int id =li.getId().intValue();
         model.addAttribute("userinfo",iUserinfoService.getUserinfo(id));
-        model.addAttribute("educationBackgrounds",iUserinfoService.getedubg());
+        model.addAttribute("educationBackgrounds",iUserinfoService.getUserInformation("educationBackground"));
+        model.addAttribute("incomeGrades",iUserinfoService.getUserInformation("incomeGrade"));
+        model.addAttribute("marriages",iUserinfoService.getUserInformation("marriage"));
+        model.addAttribute("kidCounts",iUserinfoService.getUserInformation("kidCount"));
+        model.addAttribute("houseConditions",iUserinfoService.getUserInformation("houseCondition"));
+//        model.addAttribute("userFileTypes",iUserinfoService.getUserInformation("userFileType"));
         return "userInfo";
     }
 

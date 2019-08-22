@@ -1,6 +1,16 @@
 package com.gxa.p2p.common.domain;
 
+import lombok.Data;
+
+@Data
 public class Userinfo {
+    private Systemdictionaryitem educationbackgroundItem;
+    private Systemdictionaryitem incomeGradeItem;
+    private Systemdictionaryitem marriageItem;
+    private Systemdictionaryitem kidCountItem;
+    private Systemdictionaryitem houseConditionItem;
+//    private Systemdictionaryitem userFileTypeItem;
+
     private Long id;
 
     private Integer version=1;
@@ -28,6 +38,14 @@ public class Userinfo {
     private Long realauthid;
 
     private String email;
+
+    public Systemdictionaryitem getEducationbackgroundItem() {
+        return educationbackgroundItem;
+    }
+
+    public void setEducationbackgroundItem(Systemdictionaryitem educationbackgroundItem) {
+        this.educationbackgroundItem = educationbackgroundItem;
+    }
 
     public Long getId() {
         return id;
@@ -58,7 +76,7 @@ public class Userinfo {
     }
 
     public void setRealname(String realname) {
-        this.realname = realname == null ? null : realname.trim();
+        this.realname = realname;
     }
 
     public String getIdnumber() {
@@ -66,7 +84,7 @@ public class Userinfo {
     }
 
     public void setIdnumber(String idnumber) {
-        this.idnumber = idnumber == null ? null : idnumber.trim();
+        this.idnumber = idnumber;
     }
 
     public String getPhonenumber() {
@@ -74,7 +92,7 @@ public class Userinfo {
     }
 
     public void setPhonenumber(String phonenumber) {
-        this.phonenumber = phonenumber == null ? null : phonenumber.trim();
+        this.phonenumber = phonenumber;
     }
 
     public Long getIncomegradeId() {
@@ -138,6 +156,6 @@ public class Userinfo {
     }
 
     public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
+        this.email = email;
     }
 }

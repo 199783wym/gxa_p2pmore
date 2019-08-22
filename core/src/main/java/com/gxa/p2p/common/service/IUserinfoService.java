@@ -12,6 +12,5 @@ import java.util.List;
  */
 public interface IUserinfoService {
     Userinfo getUserinfo(int id);
-
-    List<Systemdictionaryitem> getedubg();
+    List<Systemdictionaryitem> getUserInformation(String info);
 }
