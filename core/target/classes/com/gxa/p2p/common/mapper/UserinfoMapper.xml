@@ -72,4 +72,19 @@
       #{authscore,jdbcType=INTEGER}, #{houseconditionId,jdbcType=BIGINT}, #{realauthid,jdbcType=BIGINT},
       #{email,jdbcType=VARCHAR})
   </insert>
+
+  <update id="update" parameterType="com.gxa.p2p.common.domain.Userinfo">
+    update `userinfo`
+
+    set
+    version=#{version}+1,
+    phoneNumber=#{phonenumber},
+    incomeGrade_id=#{incomeGradeItem.id},
+    marriage_id=#{marriageItem.id},
+    kidCount_id=#{kidCountItem.id},
+    educationBackground_id=#{educationbackgroundItem.id},
+    houseCondition_id=#{houseConditionItem.id}
+    where id = #{id}
+
+  </update>
 </mapper>

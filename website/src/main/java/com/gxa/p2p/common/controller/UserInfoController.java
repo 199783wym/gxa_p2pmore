@@ -1,12 +1,15 @@
 package com.gxa.p2p.common.controller;
 
 import com.gxa.p2p.common.domain.LoginInfo;
+import com.gxa.p2p.common.domain.Userinfo;
 import com.gxa.p2p.common.mapper.UserinfoMapper;
 import com.gxa.p2p.common.service.IUserinfoService;
+import com.gxa.p2p.common.util.JSONResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -34,6 +37,20 @@ public class UserInfoController {
 //        model.addAttribute("userFileTypes",iUserinfoService.getUserInformation("userFileType"));
         return "userInfo";
     }
+    @RequestMapping("userInfo_save")
+    @ResponseBody
+    public JSONResult userInfoSave(Userinfo userInfo) {
+
+        JSONResult json = new JSONResult();
+        try {
+            iUserinfoService.updateBasicInfo(userInfo);
+        } catch (RuntimeException re) {
+            json.setSuccess(false);
+            json.setMsg(re.getMessage());
+        }
+        return json;
+    }
+
 
 
 }

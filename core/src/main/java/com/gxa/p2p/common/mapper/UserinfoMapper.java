@@ -15,4 +15,6 @@ public interface UserinfoMapper {
     int updateByPrimaryKey(Userinfo record);
 
     int add(Userinfo userinfo);
+
+    void update(Userinfo userInfo);
 }

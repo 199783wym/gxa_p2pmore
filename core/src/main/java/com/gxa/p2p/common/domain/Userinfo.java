@@ -1,5 +1,6 @@
 package com.gxa.p2p.common.domain;
 
+import com.gxa.p2p.common.util.BitStatesUtils;
 import lombok.Data;
 
 @Data
@@ -38,6 +39,21 @@ public class Userinfo {
     private Long realauthid;
 
     private String email;
+    // 添加绑定的状态码
+    public void addState(Long state) {
+        bitstate = BitStatesUtils.addState(bitstate, state);
+    }
+
+    // 移除状态码
+    public void  removeState(Long state) {
+        bitstate = BitStatesUtils.removeState(bitstate, state);
+    }
+
+    // 判断用户是否已经填写了基本资料
+    public boolean getIsBasicInfo() {
+        return BitStatesUtils.hasState(bitstate, BitStatesUtils.OP_USER_INFO);
+    }
+
 
     public Systemdictionaryitem getEducationbackgroundItem() {
         return educationbackgroundItem;

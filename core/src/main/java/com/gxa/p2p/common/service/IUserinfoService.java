@@ -13,4 +13,6 @@ import java.util.List;
 public interface IUserinfoService {
     Userinfo getUserinfo(int id);
     List<Systemdictionaryitem> getUserInformation(String info);
+
+    void updateBasicInfo(Userinfo userInfo);
 }
