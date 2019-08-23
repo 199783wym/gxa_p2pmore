@@ -42,7 +42,14 @@
   <select id="selectAll" resultMap="BaseResultMap" >
     select id, ip, state, username, loginInfoId, userType, loginTime
     from `iplog`
+     ORDER BY id DESC
+      LIMIT #{start},#{pageSize}
   </select>
+  <select id="queryForCount" resultType="int">
+        SELECT count(id)
+        FROM `iplog`
+    </select>
+
 
 
 </mapper>
