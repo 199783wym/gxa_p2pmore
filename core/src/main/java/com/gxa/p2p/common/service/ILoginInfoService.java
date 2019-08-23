@@ -1,5 +1,8 @@
 package com.gxa.p2p.common.service;
 
+import com.gxa.p2p.common.query.LoginInfoQueryObject;
+import com.gxa.p2p.common.query.PageResultSet;
+
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -13,4 +16,6 @@ public interface ILoginInfoService {
     void register(String username, String password);
 
     boolean login(String username, String password, HttpServletRequest request, int usertype);
+
+    PageResultSet queryForPage(LoginInfoQueryObject loginInfoQueryObject);
 }

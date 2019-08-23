@@ -56,14 +56,12 @@ public class LoginInfoController {
 //            json.setSuccess(false);
 //            json.setMsg(re.getMessage());
 //        }
-        if (iLoginInfoService.login(username,password,request, LoginInfo.USER_WEB)){
-
+        boolean flag =iLoginInfoService.login(username,password,request, LoginInfo.USER_WEB);
+        if (flag){
         }
         else{
-
             json.setSuccess(false);
             json.setMsg("登录失败");
-
         }
         return json;
 

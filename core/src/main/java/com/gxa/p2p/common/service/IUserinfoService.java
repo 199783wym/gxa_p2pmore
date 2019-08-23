@@ -1,5 +1,6 @@
 package com.gxa.p2p.common.service;
 
+import com.gxa.p2p.common.domain.LoginInfo;
 import com.gxa.p2p.common.domain.Systemdictionaryitem;
 import com.gxa.p2p.common.domain.Userinfo;
 
@@ -15,4 +16,6 @@ public interface IUserinfoService {
     List<Systemdictionaryitem> getUserInformation(String info);
 
     void updateBasicInfo(Userinfo userInfo);
+
+
 }
