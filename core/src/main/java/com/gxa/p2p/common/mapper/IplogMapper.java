@@ -17,7 +17,7 @@ public interface IplogMapper {
     int updateByPrimaryKey(Iplog record);
 
 
-    int queryForCount();
+    int queryForCount(IplogQueryObject iplogQueryObject);
 
     List<Iplog> selectByDateAndState(IplogQueryObject iplogQueryObject);
 }

@@ -30,6 +30,7 @@ public class IplogController {
     public  String  JumpintoIplogPage(@Param("beginDate") String beginDate,
                                       @Param("endDate")String  endDate,
                                       @Param("state")Byte state,
+                                      @Param("currentPage")Integer currentPage,
                                       Model model){
         IplogQueryObject iplogQueryObject=new IplogQueryObject();
 
@@ -48,6 +49,10 @@ public class IplogController {
             }
             if (state != null) {
                 iplogQueryObject.setState(state);
+
+            }
+            if(currentPage!=null){
+                iplogQueryObject.setCurrentPage(currentPage);
 
             }
         } catch (ParseException e) {

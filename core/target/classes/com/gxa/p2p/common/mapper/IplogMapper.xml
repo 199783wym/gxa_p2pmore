@@ -50,13 +50,23 @@
   <select id="queryForCount" resultType="int">
         SELECT count(id)
         FROM `iplog`
-        where loginTime &lt;= #{endDate} and loginTime &gt;=#{beginDate} and state = #{state}
-    </select>
+    <if test="endDate !=null and beginDate !=null">
+      where loginTime &lt;= #{endDate} and loginTime &gt;=#{beginDate}
+    </if>
+    <if test="state != - 1">
+      and state = #{state}
+    </if>
+  </select>
 
   <select id="selectByDateAndState" resultMap="BaseResultMap">
      select id, ip, state, username, loginInfoId, userType, loginTime
     from `iplog`
-      where loginTime &lt;= #{endDate} and loginTime &gt;=#{beginDate} and state = #{state}
+    <if test="endDate !=null and beginDate !=null">
+      where loginTime &lt;= #{endDate} and loginTime &gt;=#{beginDate}
+    </if>
+    <if test="state != - 1">
+    and state = #{state}
+    </if>
       ORDER BY id DESC
       LIMIT #{start},#{pageSize}
   </select>
