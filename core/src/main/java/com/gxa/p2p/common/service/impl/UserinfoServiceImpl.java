@@ -45,7 +45,7 @@ public class UserinfoServiceImpl implements IUserinfoService {
         try {
 
             // 获取需要保存userinfo对象（数据库原始对象）
-            LoginInfo loginInfo = UserContext.getLoginInfo();
+//            LoginInfo loginInfo = UserContext.getLoginInfo();
             Userinfo userInfo = getCurrentUserInfo(UserContext.getLoginInfo().getId());
 
             //将页面提交的数据 设置到原有userinfo对象中
@@ -72,6 +72,7 @@ public class UserinfoServiceImpl implements IUserinfoService {
     }
 
     private void updateUserInfo(Userinfo userInfo) {
+
         userinfoMapper.update(userInfo);
     }
 

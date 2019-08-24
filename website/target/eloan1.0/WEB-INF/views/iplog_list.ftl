@@ -70,9 +70,9 @@
                         <option value="0">登录失败</option>
                         <option value="1">登录成功</option>
                     </select>
-                    <#--<script type="text/javascript">-->
-                        <#--$("#state option[value=${iplogQueryObject.state}]").attr("selected", true);-->
-                    <#--</script>-->
+                    <script type="text/javascript">
+                        $("#state option[value=${iplogQueryObject.state}]").attr("selected", true);
+                    </script>
                 </div>
                 <div class="form-group">
                     <button type="button" id="query" class="btn btn-success"><i class="icon-search"></i> 查询</button>

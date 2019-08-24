@@ -18,4 +18,6 @@ public interface IplogMapper {
 
 
     int queryForCount();
+
+    List<Iplog> selectByDateAndState(IplogQueryObject iplogQueryObject);
 }

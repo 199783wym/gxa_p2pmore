@@ -12,5 +12,6 @@ import java.util.List;
  * @Version 1.0
  */
 public interface IIplogService {
-    public PageResultSet selectAll(IplogQueryObject iplogQueryObject);
+    public PageResultSet selectIplog(IplogQueryObject iplogQueryObject);
+
 }

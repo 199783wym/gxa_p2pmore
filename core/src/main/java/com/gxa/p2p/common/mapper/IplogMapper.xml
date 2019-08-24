@@ -10,6 +10,7 @@
     <result column="userType" property="usertype" jdbcType="TINYINT" />
     <result column="loginTime" property="logintime" jdbcType="TIMESTAMP" />
   </resultMap>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from `iplog`
     where id = #{id,jdbcType=BIGINT}
@@ -45,10 +46,22 @@
      ORDER BY id DESC
       LIMIT #{start},#{pageSize}
   </select>
+
   <select id="queryForCount" resultType="int">
         SELECT count(id)
         FROM `iplog`
     </select>
+
+  <select id="selectByDateAndState" resultMap="BaseResultMap">
+     select id, ip, state, username, loginInfoId, userType, loginTime
+    from `iplog`
+      where loginTime &lt;= #{endDate} and loginTime &gt;=#{beginDate} and state = #{state}
+      ORDER BY id DESC
+      LIMIT #{start},#{pageSize}
+  </select>
+
+
+
 
 
 
