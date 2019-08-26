@@ -61,12 +61,17 @@
   <select id="selectByDateAndState" resultMap="BaseResultMap">
      select id, ip, state, username, loginInfoId, userType, loginTime
     from `iplog`
-    <if test="endDate !=null and beginDate !=null">
-      where loginTime &lt;= #{endDate} and loginTime &gt;=#{beginDate}
-    </if>
-    <if test="state != - 1">
-    and state = #{state}
-    </if>
+    <where>
+      <if test="endDate !=null ">
+          loginTime &lt;= #{endDate}
+      </if>
+      <if test="beginDate !=null">
+      AND loginTime &gt;=#{beginDate}
+      </if>
+      <if test="state != - 1">
+      AND state = #{state}
+      </if>
+    </where>
       ORDER BY id DESC
       LIMIT #{start},#{pageSize}
   </select>

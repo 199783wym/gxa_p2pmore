@@ -35,26 +35,25 @@ public class IplogController {
         IplogQueryObject iplogQueryObject=new IplogQueryObject();
 
         DateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
-
+        if(currentPage!=null){
+            iplogQueryObject.setCurrentPage(currentPage);
+        }
         try {
-            if (beginDate != null) {
-                iplogQueryObject.setBeginDate(format1.parse(beginDate));
-                System.out.println(beginDate);
+             if(beginDate!=null) {
+                 iplogQueryObject.setBeginDate(format1.parse(beginDate));
+                 System.out.println(beginDate);
 //            iplogQueryObject.setBeginDate(beginDate.);
-            }
-            if (endDate != null) {
-                iplogQueryObject.setEndDate(format1.parse(endDate));
+
+             }
+             if(endDate!=null) {
+                 iplogQueryObject.setEndDate(format1.parse(endDate));
 //            iplogQueryObject.setEndDate(endDate);
 
-            }
-            if (state != null) {
-                iplogQueryObject.setState(state);
+             }
+             if(state!=null) {
+                 iplogQueryObject.setState(state);
+             }
 
-            }
-            if(currentPage!=null){
-                iplogQueryObject.setCurrentPage(currentPage);
-
-            }
         } catch (ParseException e) {
             e.printStackTrace();
         }
