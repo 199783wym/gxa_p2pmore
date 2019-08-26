@@ -5,6 +5,36 @@ import lombok.Data;
 
 @Data
 public class Userinfo {
+    private boolean isBindPhone;
+
+    public boolean isBindPhone() {
+        return isBindPhone;
+    }
+
+    public void setBindPhone(boolean bindPhone) {
+        isBindPhone = bindPhone;
+    }
+
+    // 添加绑定的状态码
+    public void addState(Long state) {
+
+        bitstate = BitStatesUtils.addState(this.bitstate, state);
+    }
+
+    // 移除状态码
+    public void  removeState(Long state) {
+
+        bitstate = BitStatesUtils.removeState(this.bitstate, state);
+    }
+
+    // 判断是否已经绑定了手机
+    public boolean getIsBindPhone() {
+        boolean flag=BitStatesUtils.hasState(this.bitstate,
+                BitStatesUtils.OP_BIND_PHONE);
+        setBindPhone(flag);
+        return flag;
+    }
+
     private Systemdictionaryitem educationbackgroundItem;
     private Systemdictionaryitem incomeGradeItem;
     private Systemdictionaryitem marriageItem;
@@ -16,7 +46,7 @@ public class Userinfo {
 
     private Integer version=1;
 
-    private Long bitstate=1L;
+    private Long bitstate=0L;
 
     private String realname;
 
@@ -40,14 +70,6 @@ public class Userinfo {
 
     private String email;
     // 添加绑定的状态码
-    public void addState(Long state) {
-        bitstate = BitStatesUtils.addState(bitstate, state);
-    }
-
-    // 移除状态码
-    public void  removeState(Long state) {
-        bitstate = BitStatesUtils.removeState(bitstate, state);
-    }
 
     // 判断用户是否已经填写了基本资料
     public boolean getIsBasicInfo() {

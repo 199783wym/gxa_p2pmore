@@ -9,6 +9,16 @@ import java.math.BigDecimal;
  * 
  */
 public class SysConstant {
+	/**
+	 * 发送手机验证码的时间间隔
+	 */
+	public static final long SEND_VERIFYCODE_INTERVAL  =  30 ; //秒
+
+	/**
+	 * 手机验证码的有效时间
+	 */
+	public static final long VERIFYCODE_VALID_TIME  =  1800000 ; //秒
+
 
 	/**
 	 * 定义系统级别的0

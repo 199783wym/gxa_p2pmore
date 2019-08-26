@@ -17,5 +17,14 @@ public interface IUserinfoService {
 
     void updateBasicInfo(Userinfo userInfo);
 
+    /**
+     *
+     * 用户绑定手机
+     *
+     * @param phoneNumber
+     * @param verifyCode
+     */
+    void bindPhone(String phoneNumber, String verifyCode);
+
 
 }

@@ -48,7 +48,7 @@
 
 							<div class="row h4 account-info">
 								<div class="col-sm-4">
-									账户总额：<span class="text-primary">${account.usableamount+account.freezedamount}元</span>
+									账户总额：<span class="text-primary">0元</span>
 								</div>
 								<div class="col-sm-4">
 									可用金额：<span class="text-primary">${account.usableamount}元</span>
@@ -106,7 +106,18 @@
 												<h5>手机认证</h5>
 												未认证
 												<a href="javascript:;" id="showBindPhoneModal">立刻绑定</a>
-<#--												<#if userinfo.isBindPhone >
+												<script type="text/javascript">
+
+												 $("#showBindPhoneModal").click(function()
+												{
+												   $("#bindPhoneModal").modal("show");
+												});
+
+												</script>
+
+
+
+												<#if userinfo.isBindPhone >
 												<p>
 													已认证
 													<a href="#">查看</a>
@@ -116,7 +127,7 @@
 													未认证
 													<a href="javascript:;" id="showBindPhoneModal">立刻绑定</a>
 												</p>
-												</#if>-->
+												</#if>
 											</div>
 											<div class="clearfix"></div>
 											<p class="info">可以收到系统操作信息,并增加使用安全性</p>
@@ -188,7 +199,43 @@
 						    <div class="col-sm-4">
 						      <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" />
 						      <button id="sendVerifyCode" class="btn btn-primary" type="button" autocomplate="off">发送验证码</button>
-						    </div>
+								<script type="text/javascript">
+								$("#sendVerifyCode").click(function() {
+								var phoneNumber = $("#phoneNumber").val(); //获取到手机号后发送ajax请求
+								var _this = $(this);
+								_this.attr("disabled", true); //点击之后立刻禁用按钮
+								if (phoneNumber) {
+								$.ajax({
+								type : "POST",
+								url : "/sendVerifyCode.do",
+								dataType : "json",
+								data : { //发送到服务器的数据
+								phoneNumber : phoneNumber
+								},
+								success : function(data) {
+								if (data.success) { //做倒计时
+								var count = 60;
+								var timer = window.setInterval(function() {
+								count--;
+								if (count <= 0) {
+								window.clearInterval(timer);
+								_this.text("重新发送验证码");
+								_this.attr("disabled", false);
+								} else {
+								_this.text(count + "秒后重新发送");
+								}
+								}, 1000);
+								} else {
+								$.messager.popup(data.msg);
+								_this.attr("disabled", false);
+								}
+								}
+								})
+								}
+								});
+								</script>
+
+							</div>
 						</div>
 						<div class="form-group">
 						    <label for="verifyCode" class="col-sm-2 control-label">验证码:</label>
@@ -201,6 +248,21 @@
 		      <div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 				<button type="button" class="btn btn-primary" id="bindPhone">保存</button>
+				  <script type="text/javascript" >
+                      $("#bindPhone").click(function() {
+                          //提交整个表单
+                          $("#bindPhoneForm").ajaxSubmit({
+                              success : function(data) {
+                                  if (data.success) {
+                                      window.location.reload(); //刷新当前页面  关闭模式窗
+                                  } else {
+                                      $.messager.confirm("提示",data.msg);
+                                  }
+                              }
+                          })
+                      });
+				  </script>
+
 		      </div>
 		    </div>
 		  </div>

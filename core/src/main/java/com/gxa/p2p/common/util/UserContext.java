@@ -2,6 +2,7 @@ package com.gxa.p2p.common.util;
 
 
 import com.gxa.p2p.common.domain.LoginInfo;
+import com.gxa.p2p.common.vo.VerifyCodeVO;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -15,6 +16,26 @@ import javax.servlet.http.HttpSession;
  * @author novo
  */
 public class UserContext {
+
+    public static final String VERIFYCODE_IN_SESSION = "verifyCodeVO_in_session";
+
+    /*
+     * 得到session,并把verifyCodeVO存放到session中
+     */
+    public static void putVerifyCode(VerifyCodeVO verifyCodeVO) {
+        getSession().setAttribute(VERIFYCODE_IN_SESSION, verifyCodeVO);
+    }
+
+    /*
+     * 取出session中的verifyCodeVO
+     */
+    public static VerifyCodeVO getVerifyCode() {
+        VerifyCodeVO verifyCodeVO = (VerifyCodeVO) getSession().getAttribute(VERIFYCODE_IN_SESSION);
+        return verifyCodeVO;
+    }
+
+
+
 
 
     public static final String USER_IN_SESSION = "loginInfo";

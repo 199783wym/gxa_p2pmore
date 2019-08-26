@@ -6,6 +6,7 @@ import com.gxa.p2p.common.domain.Userinfo;
 import com.gxa.p2p.common.mapper.SystemdictionaryitemMapper;
 import com.gxa.p2p.common.mapper.UserinfoMapper;
 import com.gxa.p2p.common.service.IUserinfoService;
+import com.gxa.p2p.common.service.IVerifyCodeService;
 import com.gxa.p2p.common.util.BitStatesUtils;
 import com.gxa.p2p.common.util.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,9 @@ public class UserinfoServiceImpl implements IUserinfoService {
 
     @Autowired
     SystemdictionaryitemMapper systemdictionaryitemMapper;
+
+    @Autowired
+    IVerifyCodeService iVerifyCodeService;
 
 
     @Override
@@ -79,4 +83,22 @@ public class UserinfoServiceImpl implements IUserinfoService {
     private Userinfo getCurrentUserInfo(Long id) {
         return   userinfoMapper.selectByPrimaryKey(id);
     }
+    @Override
+    public void bindPhone(String phoneNumber, String verifyCode) {
+        // 先做验证码的校验 (一般关于验证码的都交给验证码相关服务)
+        if (iVerifyCodeService.validate(phoneNumber,verifyCode)) {
+            //如果校验成功,给当前用户绑定手机号和状态码
+            Userinfo userInfo = getCurrentUserInfo(UserContext.getLoginInfo().getId());
+            //先判断当前用户是否已经绑定了手机
+            if ( !userInfo.getIsBindPhone()) { //表示当前没有绑定手机
+                //给当前用户添加状态码和手机号
+                userInfo.setPhonenumber(phoneNumber);
+                userInfo.addState(BitStatesUtils.OP_BIND_PHONE);
+                updateUserInfo(userInfo);
+            }
+        }else{
+            throw new RuntimeException("绑定失败");
+        }
+    }
+
 }
