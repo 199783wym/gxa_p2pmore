@@ -1,6 +1,5 @@
 package com.gxa.p2p.common.service.impl;
 
-import com.gxa.p2p.common.domain.LoginInfo;
 import com.gxa.p2p.common.domain.Systemdictionaryitem;
 import com.gxa.p2p.common.domain.Userinfo;
 import com.gxa.p2p.common.mapper.SystemdictionaryitemMapper;
@@ -12,6 +11,7 @@ import com.gxa.p2p.common.util.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -84,7 +84,7 @@ public class UserinfoServiceImpl implements IUserinfoService {
         return   userinfoMapper.selectByPrimaryKey(id);
     }
     @Override
-    public void bindPhone(String phoneNumber, String verifyCode) {
+    public void bindPhone(String phoneNumber, String verifyCode, HttpServletRequest request) {
         // 先做验证码的校验 (一般关于验证码的都交给验证码相关服务)
         if (iVerifyCodeService.validate(phoneNumber,verifyCode)) {
             //如果校验成功,给当前用户绑定手机号和状态码
@@ -95,6 +95,8 @@ public class UserinfoServiceImpl implements IUserinfoService {
                 userInfo.setPhonenumber(phoneNumber);
                 userInfo.addState(BitStatesUtils.OP_BIND_PHONE);
                 updateUserInfo(userInfo);
+
+
             }
         }else{
             throw new RuntimeException("绑定失败");

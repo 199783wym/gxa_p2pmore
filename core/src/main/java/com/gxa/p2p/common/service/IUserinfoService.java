@@ -1,9 +1,9 @@
 package com.gxa.p2p.common.service;
 
-import com.gxa.p2p.common.domain.LoginInfo;
 import com.gxa.p2p.common.domain.Systemdictionaryitem;
 import com.gxa.p2p.common.domain.Userinfo;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -20,11 +20,11 @@ public interface IUserinfoService {
     /**
      *
      * 用户绑定手机
-     *
-     * @param phoneNumber
+     *  @param phoneNumber
      * @param verifyCode
+     * @param request
      */
-    void bindPhone(String phoneNumber, String verifyCode);
+    void bindPhone(String phoneNumber, String verifyCode, HttpServletRequest request);
 
 
 }

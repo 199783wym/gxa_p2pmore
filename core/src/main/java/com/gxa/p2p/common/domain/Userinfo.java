@@ -5,15 +5,15 @@ import lombok.Data;
 
 @Data
 public class Userinfo {
-    private boolean isBindPhone;
-
-    public boolean isBindPhone() {
-        return isBindPhone;
-    }
-
-    public void setBindPhone(boolean bindPhone) {
-        isBindPhone = bindPhone;
-    }
+//    private boolean bindPhone;
+//
+//    public boolean isBindPhone() {
+//        return bindPhone;
+//    }
+//
+//    public void setBindPhone(boolean bindPhone) {
+//        this.bindPhone = bindPhone;
+//    }
 
     // 添加绑定的状态码
     public void addState(Long state) {
@@ -31,7 +31,7 @@ public class Userinfo {
     public boolean getIsBindPhone() {
         boolean flag=BitStatesUtils.hasState(this.bitstate,
                 BitStatesUtils.OP_BIND_PHONE);
-        setBindPhone(flag);
+//        this.setBindPhone(flag);
         return flag;
     }
 

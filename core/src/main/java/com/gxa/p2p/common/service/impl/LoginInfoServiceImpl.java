@@ -87,6 +87,7 @@ public class LoginInfoServiceImpl implements ILoginInfoService {
             ipLogMapper.insert(iplog);
             return true;
         }
+
         iplog.setState(Iplog.LOGIN_FAILED);
         ipLogMapper.insert(iplog);
         return false;

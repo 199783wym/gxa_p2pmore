@@ -104,8 +104,8 @@
 											</div>
 											<div class="el-accoun-auth-right">
 												<h5>手机认证</h5>
-												未认证
-												<a href="javascript:;" id="showBindPhoneModal">立刻绑定</a>
+												<#--未认证-->
+												<#--<a href="javascript:;" id="showBindPhoneModal">立刻绑定</a>-->
 												<script type="text/javascript">
 
 												 $("#showBindPhoneModal").click(function()
@@ -142,6 +142,11 @@
 												<h5>邮箱认证</h5>
 												未绑定
 												<a href="javascript:;" id="showBindEmailModal">去绑定</a>
+												<script type="text/javascript">
+                                                    $("#showBindEmailModal").click(function() {
+                                                        $("#bindEmailModal").modal("show");
+                                                    });
+												</script>
 <#--												<#if userinfo.isBindEmail>
 												<p>
 													已绑定
@@ -287,10 +292,65 @@
 					    </div>
 					</div>
 				</form>
+                  <script type="text/javascript">
+                      $("#checkEmailReg").hide();
+                      $("#checkEmailReg").css("color","red");
+                      //默认设置点击按钮不可用，等待合法的邮箱地址
+                      $("#bindEmail").enable(false)
+
+                      //监听文本框内容改变，即时给出提示
+                      $('#email').on('input propertychange', function() {
+
+                          //显示判断内容
+                          $("#checkEmailReg").css("color","red");
+                          $("#checkEmailReg").show();
+                          // 获取文本框的内容
+                          var emailTxt = $('#email').val();
+                          // 邮箱的验证正则：
+                          var reg = /^\w+@(\w+\.)+\w+$/
+
+                          //内容为空时隐藏
+                          if(emailTxt==''){
+                              $("#checkEmailReg").hide();
+                          }
+
+                          if(reg.test(emailTxt)){
+                              $("#checkEmailReg").css("color","green");
+                              $("#checkEmailReg").text("邮箱格式正确")
+                              $("#bindEmail").enable(true)
+                          }else{
+                              $("#checkEmailReg").css("color","red");
+                              $("#checkEmailReg").text("邮箱格式不符合要求")
+                              $("#bindEmail").enable(false)
+                          }
+
+                      });
+
+                  </script>
 		      </div>
 		      <div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
 				<button type="button" class="btn btn-primary" id="bindEmail">保存</button>
+				  <script type="text/javascript">
+                      $("#bindEmail").click(function() {
+                          var email = $('#email').val()
+                          $.ajax({
+                              type : "POST",
+                              url : "/sendEmail.do",
+                              dataType : "json",
+                              data : { //发送到服务器的数据
+                                  email : email
+                              },
+                              success : function(data) {
+                                  if (data.success) {
+                                      window.location.reload(); //刷新当前页面  关闭模式窗
+                                  } else {
+                                      $.messager.popup(data.msg);
+                                  }
+                              }
+                          })
+
+				  </script>
 		      </div>
 		    </div>
 		  </div>

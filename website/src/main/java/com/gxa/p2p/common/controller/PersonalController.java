@@ -7,6 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @Author: ym
  * @Date: 2019/8/26 11:45
@@ -26,10 +29,10 @@ public class PersonalController {
      */
     @RequestMapping("bindPhone")
     @ResponseBody
-    public JSONResult bindPhone(String phoneNumber, String verifyCode) {
+    public JSONResult bindPhone(String phoneNumber, String verifyCode, HttpServletRequest request) {
         JSONResult json = new JSONResult();
         try {
-            iUserInfoService.bindPhone(phoneNumber, verifyCode);
+            iUserInfoService.bindPhone(phoneNumber, verifyCode,request);
         } catch (Exception e) {
             json.setSuccess(false);
             json.setMsg(e.getMessage());
