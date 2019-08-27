@@ -44,4 +44,5 @@ public class SysConstant {
 			"5000.0000");
 
 
+	public static final long EMAIL_VALID_DAY = 100;
 }

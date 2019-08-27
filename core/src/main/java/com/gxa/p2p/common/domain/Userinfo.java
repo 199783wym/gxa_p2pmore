@@ -34,7 +34,12 @@ public class Userinfo {
 //        this.setBindPhone(flag);
         return flag;
     }
-
+    public boolean getIsBindEmail() {
+        boolean flag=BitStatesUtils.hasState(this.bitstate,
+                BitStatesUtils.OP_BIND_EMAIL);
+//        this.setBindPhone(flag);
+        return flag;
+    }
     private Systemdictionaryitem educationbackgroundItem;
     private Systemdictionaryitem incomeGradeItem;
     private Systemdictionaryitem marriageItem;

@@ -1,17 +1,23 @@
 package com.gxa.p2p.common.service.impl;
 
+import com.gxa.p2p.common.domain.Mailverify;
 import com.gxa.p2p.common.domain.Systemdictionaryitem;
 import com.gxa.p2p.common.domain.Userinfo;
+
+import com.gxa.p2p.common.mapper.MailverifyMapper;
 import com.gxa.p2p.common.mapper.SystemdictionaryitemMapper;
 import com.gxa.p2p.common.mapper.UserinfoMapper;
 import com.gxa.p2p.common.service.IUserinfoService;
 import com.gxa.p2p.common.service.IVerifyCodeService;
 import com.gxa.p2p.common.util.BitStatesUtils;
+import com.gxa.p2p.common.util.DateUtil;
+import com.gxa.p2p.common.util.SysConstant;
 import com.gxa.p2p.common.util.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -30,6 +36,8 @@ public class UserinfoServiceImpl implements IUserinfoService {
 
     @Autowired
     IVerifyCodeService iVerifyCodeService;
+    @Autowired
+    MailverifyMapper mailverifyMapper;
 
 
     @Override
@@ -80,7 +88,7 @@ public class UserinfoServiceImpl implements IUserinfoService {
         userinfoMapper.update(userInfo);
     }
 
-    private Userinfo getCurrentUserInfo(Long id) {
+    public Userinfo getCurrentUserInfo(Long id) {
         return   userinfoMapper.selectByPrimaryKey(id);
     }
     @Override
@@ -102,5 +110,24 @@ public class UserinfoServiceImpl implements IUserinfoService {
             throw new RuntimeException("绑定失败");
         }
     }
+
+    public void bindEmail(String uuid) {
+        //根据uuid查村mailVerify对象
+        Mailverify mailVerify = mailverifyMapper.selectByUUID(uuid);
+        if (null != mailVerify
+                && DateUtil.getBetweenSecond(mailVerify.getSendtime(), new Date()) < SysConstant.EMAIL_VALID_DAY * 24 * 3600 ) {
+            //如果有 且在有效期内 的用户没有绑定邮箱
+            Userinfo userInfo = userinfoMapper.selectByPrimaryKey(mailVerify.getLogininfoId());
+            if ( !userInfo.getIsBindEmail()) {
+                //添加邮箱状态码  设置email属性
+                userInfo.addState(BitStatesUtils.OP_BIND_EMAIL);
+                userInfo.setEmail(mailVerify.getEmail());
+                updateUserInfo(userInfo);
+            }
+        }else{
+            throw new RuntimeException("验证邮箱地址错误!");
+        }
+    }
+
 
 }

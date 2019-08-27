@@ -4,6 +4,7 @@ import com.gxa.p2p.common.service.IUserinfoService;
 import com.gxa.p2p.common.util.JSONResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -39,5 +40,18 @@ public class PersonalController {
         }
         return json;
     }
+    @RequestMapping("bindEmail")
+    public String bingEmail(String code, Model model) {
+        System.out.println(code);
+        try {
+            iUserInfoService.bindEmail(code);
+            model.addAttribute("success", true);
+        } catch (Exception e) {
+            model.addAttribute("success", false);
+            model.addAttribute("msg", e.getMessage());
+        }
+        return "checkmail_result";
+    }
+
 
 }

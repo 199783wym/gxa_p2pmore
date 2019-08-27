@@ -26,5 +26,11 @@ public interface IUserinfoService {
      */
     void bindPhone(String phoneNumber, String verifyCode, HttpServletRequest request);
 
-
+    /**
+     * 绑定邮箱
+     *
+     * @param uuid
+     */
+    void bindEmail(String uuid);
+    Userinfo getCurrentUserInfo(Long userinfo);
 }
