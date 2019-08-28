@@ -79,6 +79,7 @@
     set
     version=#{version}+1,
     phoneNumber=#{phonenumber},
+    bitState=#{bitstate},
     incomeGrade_id=#{incomeGradeItem.id},
     marriage_id=#{marriageItem.id},
     kidCount_id=#{kidCountItem.id},

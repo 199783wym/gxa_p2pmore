@@ -36,6 +36,7 @@ public class UserinfoServiceImpl implements IUserinfoService {
 
     @Autowired
     IVerifyCodeService iVerifyCodeService;
+
     @Autowired
     MailverifyMapper mailverifyMapper;
 
@@ -103,8 +104,6 @@ public class UserinfoServiceImpl implements IUserinfoService {
                 userInfo.setPhonenumber(phoneNumber);
                 userInfo.addState(BitStatesUtils.OP_BIND_PHONE);
                 updateUserInfo(userInfo);
-
-
             }
         }else{
             throw new RuntimeException("绑定失败");

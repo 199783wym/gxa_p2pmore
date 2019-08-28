@@ -1,10 +1,17 @@
 package com.gxa.p2p.common.controller;
 
+import com.gxa.p2p.common.domain.Account;
 import com.gxa.p2p.common.domain.LoginInfo;
+import com.gxa.p2p.common.domain.Userinfo;
+import com.gxa.p2p.common.service.IAccountService;
 import com.gxa.p2p.common.service.ILoginInfoService;
+import com.gxa.p2p.common.service.IUserinfoService;
 import com.gxa.p2p.common.util.JSONResult;
+import com.gxa.p2p.common.util.SysConstant;
+import com.gxa.p2p.common.util.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -20,6 +27,10 @@ import javax.servlet.http.HttpServletRequest;
 public class LoginInfoController {
     @Autowired
     private ILoginInfoService iLoginInfoService;
+    @Autowired
+    private IUserinfoService iUserinfoService;
+    @Autowired
+    private IAccountService iAccountService;
 
     @RequestMapping("checkUsername")
     @ResponseBody
@@ -65,5 +76,16 @@ public class LoginInfoController {
         }
         return json;
 
+    }
+
+    @RequestMapping("borrow")
+    public String borrow(Model model){
+        Userinfo userInfo = iUserinfoService.getCurrentUserInfo(UserContext.getLoginInfo().getId());
+        Account account =iAccountService.selectAccountById(UserContext.getLoginInfo().getId().intValue());
+        model.addAttribute("userinfo",userInfo);
+        model.addAttribute("account",account);
+        model.addAttribute("creditBorrowScore", SysConstant.CREDIT_BORROW_SCORE);
+
+        return "borrow";
     }
 }

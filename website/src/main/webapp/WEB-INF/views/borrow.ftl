@@ -52,8 +52,8 @@
 							</#if>
 						</li>
 						<li>
-							<#if (userinfo.authScore<creditBorrowScore)>
-								<a href="#">userinfo.authScore${userinfo.authScore}分</a>
+							<#if (userinfo.authscore<creditBorrowScore)>
+								<a href="#">userinfo.authscore${userinfo.authscore}分</a>
 								<a href="#">材料认证分数达到${creditBorrowScore}分</a>
 								<span class="glyphicon glyphicon-remove" style="color:red;"></span>
 							<#else>
@@ -62,7 +62,7 @@
 						</li>
 					</ul>
 					<#if userinfo.isBasicInfo && userinfo.isBindPhone && userinfo.isBindEmail
-					        && (userinfo.authScore >= creditBorrowScore) >
+					        && (userinfo.authscore >= creditBorrowScore) >
 						<a href="/borrowInfo.do" class="el-borrow-apply">
 							申请贷款
 						</a>

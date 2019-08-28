@@ -80,7 +80,7 @@ public class Userinfo {
     public boolean getIsBasicInfo() {
         return BitStatesUtils.hasState(bitstate, BitStatesUtils.OP_USER_INFO);
     }
-
+    //isBasicInfo
 
     public Systemdictionaryitem getEducationbackgroundItem() {
         return educationbackgroundItem;

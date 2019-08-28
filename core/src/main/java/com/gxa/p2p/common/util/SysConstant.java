@@ -36,6 +36,8 @@ public class SysConstant {
 	 * 定义显示精度
 	 */
 	public static final int DISPLAY_SCALE = 2;
+	//最低授权分
+	public static final int CREDIT_BORROW_SCORE =30;
 
 	/**
 	 * 定义初始授信额度
