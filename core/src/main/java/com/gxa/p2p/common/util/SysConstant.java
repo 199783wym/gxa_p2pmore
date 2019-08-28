@@ -47,4 +47,20 @@ public class SysConstant {
 
 
 	public static final long EMAIL_VALID_DAY = 100;
+
+	//最小投标金额
+	public static  final BigDecimal MIN_BID_AMOUNT=new BigDecimal(50);
+	public static final int RETURN_TYPE_MONTH_INTEREST_PRINCIPAL = 10;
+	public static final int RETURN_TYPE_MONTH_INTEREST = 10;
+	public static final byte BIDREQUEST_STATE_PUBLISH_PENDING =0 ;
+	public static final byte BIDREQUEST_STATE_BIDDING = 1;
+	public static final byte BIDREQUEST_STATE_UNDO = 2;
+	public static final byte BIDREQUEST_STATE_BIDDING_OVERDUE =3 ;
+	public static final byte BIDREQUEST_STATE_APPROVE_PENDING_1 =4 ;
+	public static final byte BIDREQUEST_STATE_APPROVE_PENDING_2 = 5;
+	public static final byte BIDREQUEST_STATE_REJECTED = 6;
+	public static final byte BIDREQUEST_STATE_PAYING_BACK = 7;
+	public static final byte BIDREQUEST_STATE_COMPLETE_PAY_BACK = 8;
+	public static final byte BIDREQUEST_STATE_PAY_BACK_OVERDUE = 9;
+	public static final byte BIDREQUEST_STATE_PUBLISH_REFUSE = 10;
 }

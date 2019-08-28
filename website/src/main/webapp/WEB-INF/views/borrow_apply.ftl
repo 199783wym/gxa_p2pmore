@@ -118,7 +118,7 @@
                 借款金额
             </label>
             <div class="col-sm-3  input-group">
-                <input class="form-control" name="bidRequestAmount" id="bidRequestAmount"/>
+                <input class="form-control" name="bidrequestamount" id="bidrequestamount"/>
                 <span class="input-group-addon">元</span>
             </div>
         </div>
@@ -127,7 +127,7 @@
                 借款利息
             </label>
             <div class="col-sm-3  input-group">
-                <input class="form-control" name="currentRate"/>
+                <input class="form-control" name="currentrate"/>
                 <span class="input-group-addon">%</span>
             </div>
         </div>
@@ -136,7 +136,7 @@
                 借款期限
             </label>
             <div class="col-sm-3 input-group">
-                <select class="form-control" name="monthes2Return">
+                <select class="form-control" name="monthes2return">
                     <option value="1">1</option>
                     <option value="3">3</option>
                     <option value="6">6</option>
@@ -152,11 +152,11 @@
                 还款方式
             </label>
             <label class="radio-inline">
-                <input type="radio" value="0" checked="checked" name="returnType"/>
+                <input type="radio" value="0" checked="checked" name="returntype"/>
                 按月分期
             </label>
             <label class="radio-inline">
-                <input type="radio" value="1" name="returnType"/>
+                <input type="radio" value="1" name="returntype"/>
                 按月到期
             </label>
         </div>
@@ -165,7 +165,7 @@
                 最小投标
             </label>
             <div class="col-sm-3  input-group">
-                <input class="form-control" name="minBidAmount"/>
+                <input class="form-control" name="minbidamount"/>
                 <span class="input-group-addon">元</span>
             </div>
         </div>
@@ -174,7 +174,7 @@
                 招标天数
             </label>
             <div class="col-sm-3 input-group">
-                <select class="form-control" name="disableDays">
+                <select class="form-control" name="disabledays">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
