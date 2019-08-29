@@ -92,11 +92,11 @@
 									<a target="_blank" href="/borrow_info.do?id=${data.id}">${data.title}</a>&emsp;<span class="label label-primary">信</span>
 								</td>
 								<td>${data.createUser.username}</td>
-								<td>${(data.applyTime?string("yyyy-MM-dd HH:mm:ss"))!'未发布'}</td>
-								<td>${data.bidRequestAmount}</td>
-								<td>${data.monthes2Return}月</td>
-								<td>${data.currentRate}%</td>
-								<td>${data.totalRewardAmount}</td>
+								<td>${(data.applytime?string("yyyy-MM-dd HH:mm:ss"))!'未发布'}</td>
+								<td>${data.bidrequestamount}</td>
+								<td>${data.monthes2return}月</td>
+								<td>${data.currentrate}%</td>
+								<td>${data.totalrewardamount}</td>
 								<td>${data.bidRequestStateDisplay}</td>
 								<td>
 									<a href="javascript:void(-1);" class="auditClass" data-json='${data.jsonString}'>审核</a>

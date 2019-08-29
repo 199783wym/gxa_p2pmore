@@ -51,7 +51,7 @@ public class SysConstant {
 	//最小投标金额
 	public static  final BigDecimal MIN_BID_AMOUNT=new BigDecimal(50);
 	public static final int RETURN_TYPE_MONTH_INTEREST_PRINCIPAL = 10;
-	public static final int RETURN_TYPE_MONTH_INTEREST = 10;
+	public static final byte RETURN_TYPE_MONTH_INTEREST = 1;
 	public static final byte BIDREQUEST_STATE_PUBLISH_PENDING =0 ;
 	public static final byte BIDREQUEST_STATE_BIDDING = 1;
 	public static final byte BIDREQUEST_STATE_UNDO = 2;

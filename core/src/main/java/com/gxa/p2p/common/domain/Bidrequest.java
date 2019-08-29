@@ -107,7 +107,7 @@ public class Bidrequest {
 
     public String getJsonString() {
         Map<String, Object> json = new HashMap<>();
-//        json.put("id", id);
+        json.put("id", id);
         json.put("username", createUser.getUsername());
         json.put("title", title);
         json.put("bidRequestAmount", bidrequestamount);

@@ -22,6 +22,10 @@
     <result column="applyTime" property="applytime" jdbcType="TIMESTAMP" />
     <result column="publishTime" property="publishtime" jdbcType="TIMESTAMP" />
     <result column="returnType" property="returntype" jdbcType="TINYINT" />
+    <association property="createUser" javaType="LoginInfo"
+                 column="createuser_id"
+                 select="com.gxa.p2p.common.mapper.LoginInfoMapper.selectByPrimaryKey"/>
+
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
     delete from `bidrequest`
@@ -78,5 +82,24 @@
     monthes2Return, bidCount, totalRewardAmount, currentSum, title, description, note, 
     disableDate, createuser_id, disableDays, minBidAmount, applyTime, publishTime, returnType
     from `bidrequest`
+  </select>
+  <select id="queryForCount" resultType="int">
+    select count(id)
+    from bidrequest
+  </select>
+  <select id="queryForPage" resultMap="BaseResultMap">
+    select
+    id,
+    title,
+    applyTime,
+    bidRequestAmount,
+    monthes2Return,
+    currentRate,
+    totalRewardAmount,
+    bidRequestState,
+    createuser_id,
+    returnType
+    from bidrequest
+    limit #{start},#{pageSize}
   </select>
 </mapper>
